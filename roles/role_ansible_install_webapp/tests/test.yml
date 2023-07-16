@@ -4,5 +4,5 @@
   tasks:
     - name: check website
       uri:
-        url: {{ ansible_host }}
+        url: http://192.168.99.11
         status_code: 200
