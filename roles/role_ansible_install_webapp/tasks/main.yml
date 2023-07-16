@@ -3,3 +3,11 @@
   template: 
     src: index.html.j2
     dest: /home/{{ system_user }}/index.html
+- name: Create Apache container
+  docker_container:
+    name: webapp
+    image: httpd
+    ports:
+     - "80:80"
+    volumes: 
+      - /home/vagrant/index.html:/usr/local/apache2/htdocs/index.html
