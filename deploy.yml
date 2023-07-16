@@ -1,0 +1,6 @@
+---
+- name: "wordpress installation"
+  hosts : prod
+  become: true
+  roles:
+  - role_ansible_install_webapp

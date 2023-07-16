@@ -1,0 +1,5 @@
+- include_tasks: "docker.yml"
+- name: copie website template
+  template: 
+    src: index.html.j2
+    dest: /home/{{ system_user }}/index.html

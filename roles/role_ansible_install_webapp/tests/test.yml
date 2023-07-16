@@ -1,0 +1,8 @@
+---
+- hosts: "all"
+  remote_user: "vagrant"
+  tasks:
+    - name: check website
+      uri:
+        url: {{ ansible_host }}
+        status_code: 200
